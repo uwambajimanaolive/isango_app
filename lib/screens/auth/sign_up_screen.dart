@@ -99,6 +99,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           _passwordController.text,
         );
       }
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, AppRoutes.verifyEmail);
+      }
     } catch (_) {
       if (!mounted) {
         return;
